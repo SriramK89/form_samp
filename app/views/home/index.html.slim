@@ -1,0 +1,39 @@
+= form_tag(target_path, :method => "get") do
+  = label_tag(:q, "Search for:")
+  = text_field_tag(:q)
+  br
+  = check_box_tag(:pet_dog)
+  = label_tag(:pet_dog, "I own a dog")
+  br
+  = check_box_tag(:pet_cat)
+  = label_tag(:pet_cat, "I own a cat")
+  br
+  = radio_button_tag(:age, "child")
+  = label_tag(:age_child, "I am younger than 21")
+  br
+  = radio_button_tag(:age, "adult")
+  = label_tag(:age_adult, "I'm over 21")
+  br
+  = text_area_tag(:message, "Hi, nice site", :size => "24x6")
+  br
+  | Password:
+  = password_field_tag(:password)
+  br
+  | Hidden field
+  = hidden_field_tag(:parent_id, "5")
+  br
+  | Search field
+  = search_field(:user, :name)
+  br
+  | Telephone field
+  = telephone_field(:user, :phone)
+  br
+  | Url field
+  = url_field(:user, :homepage)
+  br
+  | email field
+  = email_field(:user, :address)
+  br
+  = select_tag(:city_id, options_for_select([[city_option(1), 1], [city_option(2), 2]], 2))
+  br
+  = submit_tag("Search")
